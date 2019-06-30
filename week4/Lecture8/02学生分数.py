@@ -8,7 +8,11 @@ def dot_product(a,b):
     return result
 
 def avg(grades, weights):
-    return dot_product(grades, weights) / len(grades)
+    try:
+        return dot_product(grades, weights) / len(grades)
+    except ZeroDivisionError:
+        print "divide by zero Error"
+        return 0.0
 
 test = [
    [ ['fred','flintstone'],[10.0, 5.0, 85.0]],
